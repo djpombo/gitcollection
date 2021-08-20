@@ -9,7 +9,9 @@ export const Routes: React.FC = () =>  {
     
       <Switch>
           <Route component={Dashboard} path="/" exact />
-          <Route component={Repo} path="/repositories"/>
+          {/* este "+" é uma gambi pq o full_name tem uma "/" entao o router acha q tem mais um subdiretorio
+          assim ele nao pega mais este subdiretorio, é um implemento pontual desta aplicação */}
+          <Route component={Repo} path="/repositories/:repository+"/> 
       </Switch>
   
   );
