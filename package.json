@@ -27,7 +27,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "analyzer": "npm run build && npx run cra-bundle-analyzer"
+    "analyzer": "yarn run build && yarn run cra-bundle-analyzer"
   },
   "eslintConfig": {
     "extends": [

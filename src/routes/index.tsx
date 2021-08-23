@@ -4,8 +4,12 @@ import { FiLoader } from 'react-icons/fi';
 //import { Dashboard } from '../pages/Dashboard';
 //import { Repo } from '../pages/Repo';
 
-const Dashboard = React.lazy(()=> import('../pages/Dashboard'));
-const Repo = React.lazy(()=> import('../pages/Repo'));
+const Dashboard = React.lazy(()=> import(
+  /* webpackPrefetch: true */
+  /* webpackChunkName: "dashboard" */'../pages/Dashboard'));
+const Repo = React.lazy(()=> import(
+  /* webpackPrefetch: true */
+  /* webpackChunkName: "repo" */'../pages/Repo'));
 
 export const Routes: React.FC = () =>  {
   return (
